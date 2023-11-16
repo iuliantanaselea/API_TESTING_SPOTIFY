@@ -2,12 +2,12 @@ from pprint import pprint
 
 import requests
 
-from api_requests.create_token import TOKEN
+from api_requests.create_token import ACCESS_TOKEN
 
 API = "https://api.spotify.com/v1"
 
 headers = {
-    'Authorization': f"Bearer {TOKEN}"
+    'Authorization': f"Bearer {ACCESS_TOKEN}"
     # reprezinta valoarea token-ului de autentificare, Client secret
 
 }
