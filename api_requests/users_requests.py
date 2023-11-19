@@ -1,5 +1,5 @@
 from pprint import pprint
-from constants import *
+from utils.constants import *
 import requests
 
 def get_current_user_profile():

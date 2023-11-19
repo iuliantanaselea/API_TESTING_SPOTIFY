@@ -1,5 +1,5 @@
 from pprint import pprint
-from constants import *
+from utils.constants import *
 import requests
 
 artist_id = "0TnOYISbd1XYRBk9myaseg"
