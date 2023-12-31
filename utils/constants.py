@@ -5,11 +5,12 @@ REDIRECT_URI = 'http://localhost:8080'
 API = "https://api.spotify.com/v1"
 USER_ID = "YOUR USER ID"
 
-#Will be modified manually with the code obtained running the "run_create_token.py" file
+
+#Va fi inlocuit manual cu codul obtinut ruland fisierul "run_create_token.py"
 ACCESS_TOKEN = "BQBQewNVmwgQaAEUGdSaXu_PIspapLxohBTrh1VLk0YK9HTPZMDAt0RbK_AOr15leLDIKB0WokkEHo8u6aQ3v74nl3UFcBKbcGdjlNe5ASBBXp4jp_sL9TDmQ8U02R4L28jfxwEtvhbDD_-O4HpxqXxxCChh2OifQZnDkqCd8HJYzYQUukBJTxJ84bkibt3eyI8CvpoZtMMQzoS64yPnhKqSBOskc13nciR6t6tWUTmib1lLFNgTBIFs3_iRVIKOjC2Pjfj0RdT7y0g0AUk-cNUBlQSzLQ"
 
 HEADER = {
     'Authorization': f"Bearer {ACCESS_TOKEN}",
-    # represents the value of the authentification token
+    # reprezinta valoarea tokenului de autentificare
     'Content-Type': 'application/json'
 }
