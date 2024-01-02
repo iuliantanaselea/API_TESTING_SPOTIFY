@@ -42,5 +42,5 @@ class TestPlaylistAPI:
         assert playlist['name'] == name
         assert playlist['description'] == description or playlist['description'] ==""
         assert playlist['owner']['id'] == USER_ID
-        assert playlist['public'] == False
+        assert playlist['public'] == True
 

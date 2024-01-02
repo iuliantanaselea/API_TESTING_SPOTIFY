@@ -24,8 +24,8 @@ class TestAlbumsAPI:
         assert status_code == 200
         items = get_user_saved_albums(market="RO").json()['items']
         for item in items:
-            assert item['album']['id'] == ALBUMS_IDS['Arhitectul_din_Babel'] or item['album']['id'] == ALBUMS_IDS[
-                'Haosoleum']
+            assert (item['album']['id'] == ALBUMS_IDS['Arhitectul_din_Babel'] or
+                    item['album']['id'] == ALBUMS_IDS['Haosoleum'])
 
         delete_status_code = delete_albums_for_curent_user(albums_ids).status_code
         assert delete_status_code == 200

@@ -9,10 +9,10 @@ Pentru rularea programului, este necesar ca python 3.11, venv si pip sa fie inst
 Este necesar ca versiunea de python instalata sa fie cel putin 3.11 . Poti verifica daca ai Python
 instalat ruland in Terminal comanda: ```python --version```. Daca rezultatul afiseaza o versiune, Python este deja instalat. 
 Daca nu vezi o versiune afisata, sau este o versiune anterioara, poti descarca versiunea necesara urmarind link-ul urmator:  https://www.python.org/downloads/
+
 2. pip
 
 pip este managerul de pachete Python de referință. Este folosit pentru a instala și actualiza pachete într-un mediu virtual.
-
 Poti verifica daca ai pachetul pip instalat ruland in Terminal comanda: ```pip --version```.
 Daca rezultatul afiseaza o versiune, pachetul pip este deja instalat si nu sunt necesare
 alte actiuni. Daca nu este instalat, instructiuni pentru instalarea pachetului pot fi gasite
@@ -22,7 +22,6 @@ urmarind link-ul urmator: https://pip.pypa.io/en/stable/cli/pip_download/
 
 Este necesara crearea unui mediu virtual (venv) in prealabil. Pentru informatii despre cum 
 poate fi creat unul, instructiunile pot fi gasite urmarind link-ul urmator: https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment
-
 
 ## Pasul 1 Crearea unui cont Spotify
 
@@ -53,7 +52,8 @@ sirul de caractere din campul _Nume utilizator_
 
 I. Creaza un folder in calculator, unde doresti sa salvezi codul pentru rularea aplicatiei.
 
-II. Instaleaza pachetele Python necesare ruland in Terminal comanda: 
+II. Librăriile utilizate sunt requests (versiunea 2.31), pytest (versiunea 7.4.3), pytest-html (versiunea 4.1.1). 
+Pentru instalarea acestora este necesară rularea din terminal a comenzii:
 ```commandline
 pip install -r requirements.txt
 ```
@@ -106,8 +106,8 @@ _constants.py_ cu noul cod de acces generat.
 pprint(request_access_token(authorization_code).json()['access_token'])
 ```
 
-:bangbang: Token-ul generat este valabil pentru 60 de minute. Dupa expirarea timpului, este necesar sa
-fie reluati pasii de la capitolul Autentificare.
+:bangbang: **Token-ul generat este valabil pentru 60 de minute. Dupa expirarea timpului, este necesar sa
+fie reluati pasii de la capitolul Autentificare.**
 
 Pentru mai multe informatii poti accesa link-urile urmatoare:
 

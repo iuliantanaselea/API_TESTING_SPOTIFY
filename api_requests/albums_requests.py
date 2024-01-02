@@ -28,9 +28,3 @@ def delete_albums_for_curent_user(ids):
 def get_user_saved_albums(limit=20, offset=0,market=""):
     response = requests.get(f"{API}/me/albums?limit={limit}&offset={offset}&market={market}",headers=HEADER)
     return response
-
-
-
-# r = get_album("3a0UOgDWw2pTajw85QPMiz")
-# print(r.status_code)
-# pprint(r.json())
