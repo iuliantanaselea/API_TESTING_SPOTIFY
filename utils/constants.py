@@ -1,13 +1,11 @@
 # SCOPE determina ce permisiuni are utilizatorul
 SCOPE = "user-read-private user-read-email playlist-modify-public playlist-modify-private user-library-modify ugc-image-upload user-library-read user-read-playback-position"
-# CLIENT_ID = 'YOUR CLIENT ID' #Valoarea se gaseste in panoul de comanda al aplicatiei Spotify
-CLIENT_ID = '32cbf2e3eb0b43b29f6f1da9813ef669' #Valoarea se gaseste in panoul de comanda al aplicatiei Spotify
-# CLIENT_SECRET = 'YOUR CLIENT SECRET' #Valoarea se gaseste in panoul de comanda al aplicatiei Spotify
-CLIENT_SECRET = 'da930ff5d67a4da08e83d02ae77d5f63' #Valoarea se gaseste in panoul de comanda al aplicatiei Spotify
+CLIENT_ID = 'YOUR CLIENT ID' #Valoarea se gaseste in panoul de comanda al aplicatiei Spotify
+CLIENT_SECRET = 'YOUR CLIENT SECRET' #Valoarea se gaseste in panoul de comanda al aplicatiei Spotify
 REDIRECT_URI = 'http://localhost:8080'
 API = "https://api.spotify.com/v1"
-# USER_ID = "YOUR USER ID"
-USER_ID = "317eaadf4s4xlnf5n5dqoo33swd4"
+USER_ID = "YOUR USER ID"
+
 
 
 #Va fi inlocuit manual cu codul obtinut ruland fisierul "run_create_token.py"
