@@ -7,3 +7,4 @@ def get_current_user_profile():
     return response
 
 pprint(get_current_user_profile().json())
+#Will return the country of the user, as se in the user's account profile, the display name, email, Spotify user ID

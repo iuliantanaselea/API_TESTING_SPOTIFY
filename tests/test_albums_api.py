@@ -19,7 +19,7 @@ class TestAlbumsAPI:
             assert album['id'] == ALBUMS_IDS['Arhitectul_din_Babel'] or album['id'] == ALBUMS_IDS['Haosoleum']
 
     def test_save_albums_for_current_user(self):
-        albums_ids = [ALBUMS_IDS['Arhitectul_din_Babel'], ALBUMS_IDS['Haosoleum']]
+        albums_ids = [ALBUMS_IDS['Arhitectul_din_Babel'],ALBUMS_IDS['Haosoleum']]
         status_code = save_albums_for_curent_user(albums_ids).status_code
         assert status_code == 200
         items = get_user_saved_albums(market="RO").json()['items']
