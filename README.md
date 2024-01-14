@@ -1,73 +1,65 @@
-Acest program are rolul de a testa functionalitatile API-ului Spotify.
-
+The scope of this application is to test the functionalities of Spotify API.
 [Spotify Web API](https://developer.spotify.com/documentation/web-api)
 
-### Prerechizite
-Pentru rularea programului, este necesar ca python 3.11, venv si pip sa fie instalate.
+### Prerequisites
+To run the application, you need python 3.11, venv and pip to be installed.
 1. python 3.11
 
-Este necesar ca versiunea de python instalata sa fie cel putin 3.11 . Poti verifica daca ai Python
-instalat ruland in Terminal comanda: ```python --version```. Daca rezultatul afiseaza o versiune, Python este deja instalat. 
-Daca nu vezi o versiune afisata, sau este o versiune anterioara, poti descarca versiunea necesara urmarind link-ul urmator:  https://www.python.org/downloads/
+You need to have Python installed, at least the version 3.11 . Check if you already have Python installed
+running the Terminal command: ```python --version```. If the result shows a version number, Python is already
+installed. If not, you can download it here: https://www.python.org/downloads/
 
 2. pip
 
-pip este managerul de pachete Python de referință. Este folosit pentru a instala și actualiza pachete într-un mediu virtual.
-Poti verifica daca ai pachetul pip instalat ruland in Terminal comanda: ```pip --version```.
-Daca rezultatul afiseaza o versiune, pachetul pip este deja instalat si nu sunt necesare
-alte actiuni. Daca nu este instalat, instructiuni pentru instalarea pachetului pot fi gasite
-urmarind link-ul urmator: https://pip.pypa.io/en/stable/cli/pip_download/
+pip is the package manager for Python. It is used to install and update packages in a virtual environment.
+Check if you have already pip installed running the Terminal command: ```pip --version```.
+If the result shows a version number, pip is installed and there is no need for further actions. If not,
+instructions for downloading the latest version of pip can be found here: https://pip.pypa.io/en/stable/cli/pip_download/
 
 3. venv (Virtual Environment)
 
-Este necesara crearea unui mediu virtual (venv) in prealabil. Pentru informatii despre cum 
-poate fi creat unul, instructiunile pot fi gasite urmarind link-ul urmator: https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment
+You need to create a virtual environment (venv) before running the application. For more information on
+how you create one, follow this link:  https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment
 
-## Pasul 1 Crearea unui cont Spotify
+## Step 1 Create a Spotify account
 
-Acest program se bazeaza pe API-ul Spotify. Pentru a putea folosi programul, 
-este necesara crearea unui cont de dezvoltator pe Spotify.
-
+This app relies on Spotify API. In order to use the app, you need to create
+a Spotify developer account.
  
-1. Viziteaza site-ul [Spotify for developers](https://developer.spotify.com/). 
- Acceseaza sectiunea "Log in". Daca ai un cont, introdu datele de autentificare. 
- Daca nu, acceseaza sectiunea "Inregistreaza-te la Spotify" si urmeaza pasii necesari
- pentru a crea un cont. Dupa logare sau inregistrare, acceseaza [panoul
- de comanda al contului](https://developer.spotify.com/dashboard).
+1. Visit the [Spotify for developers portal](https://developer.spotify.com/). 
+ Access the "Log in" section. If you already have an account, enter your authentication credentials.
+ If not, click "Sign up for Spotify" and follow the steps to create an account. After you've logged in or
+ signed up, access the [account dashboard](https://developer.spotify.com/dashboard).
 
-2. Apasa pe butonul "Create App". Seteaza numele si descrierea noii aplicatii, 
-completeaza campul "REDIRECT URIs" cu valoarea "http://localhost:8080", accepta
-Termenii si Conditiile si apasa butonul "Save"
+2. Click the "Create App" button. Enter your new app name and description, 
+fill the "REDIRECT URIs" field with "http://localhost:8080", accept the Terms and Conditions and click "Save".
 
-3. Apasa pe butonul "Settings". Sub campul Client ID, va fi afisat un link cu textul 
-"View client secret". Apasa pe acesta pentru a afisa campul Client Secret. Copiaza 
-informatiile din campurile Client ID si Client Secret in calculator, deoarece va fi nevoie
-de ele la initializarea aplicatiei.
+3. Click the "Settings" button. Underneath the Client ID field, you'll see a "View client secret" link.
+Click that link to reveal your Client Secret. Copy both Client ID and Client Secret values in your computer.
+because you will need them later when initializing the application.
 
-4. Acceseaza sectiunea [Editeaza profilul](https://www.spotify.com/ro-ro/account/profile/)
-pe site-ul [Spotify](https://www.spotify.com/ro-ro/account/overview/) si copiaza 
-sirul de caractere din campul _Nume utilizator_ 
+4. Access the [Edit profile](https://www.spotify.com/ro-ro/account/profile/) section on [Spotify](https://www.spotify.com/ro-ro/account/overview/) and 
+copy the _Username_ 
 
-## Pasul 2 Instalarea si initializarea aplicatiei 
+## Pasul 2 Installation and Setup
 
-I. Creaza un folder in calculator, unde doresti sa salvezi codul pentru rularea aplicatiei.
+I. Create a folder in your computer where you'd like to store the code to run the app.
 
-II. Librăriile utilizate sunt requests (versiunea 2.31), pytest (versiunea 7.4.3), pytest-html (versiunea 4.1.1). 
-Pentru instalarea acestora este necesară rularea din terminal a comenzii:
+II. The libraries used are requests (version 2.31), pytest (version 7.4.3), pytest-html (version 4.1.1). 
+To install them, run the Terminal command:
 ```commandline
 pip install -r requirements.txt
 ```
-III. In fisierul _constants.py_, inlocuieste valorile din constantele 
-_CLIENT_ID, CLIENT_SECRET_ cu cele obtinute la pasul 1.3 si valoarea din
-constanta _USER_ID_ cu cea copiata la pasul 1.4 :
+III. In _constants.py_ file, replace your _CLIENT_ID, CLIENT_SECRET_ values with the ones obtained in step 1.3 .
+Replace the _USER_ID_ value with the one copied at step 1.4 :
 
 ```
-# SCOPE determina ce permisiuni are utilizatorul
+# SCOPE determines what  permisions the user has
 SCOPE = "user-read-private user-read-email playlist-modify-public playlist-modify-private user-library-modify ugc-image-upload user-library-read user-read-playback-position"
 
-# CLIENT_ID = 'YOUR CLIENT ID' #Valoarea se gaseste in panoul de comanda al aplicatiei Spotify
+# CLIENT_ID = 'YOUR CLIENT ID' # You can find it in the application dashboard
 
-# CLIENT_SECRET = 'YOUR CLIENT SECRET' #Valoarea se gaseste in panoul de comanda al aplicatiei Spotify
+# CLIENT_SECRET = 'YOUR CLIENT SECRET' # You can find it in the application dashboard
 
 REDIRECT_URI = 'http://localhost:8080'
 API = "https://api.spotify.com/v1"
@@ -75,63 +67,59 @@ API = "https://api.spotify.com/v1"
 # USER_ID = "YOUR USER ID"
 
 
-#Va fi inlocuit manual cu codul obtinut ruland fisierul "run_create_token.py"
+# Will be modified manually with the code obtained running the "run_create_token.py" file
 ACCESS_TOKEN = "YOUR_GENERATED_ACCESS_TOKEN
 ```
 
 
-## Pasul 3 Autentificarea
+## Step 3 Authentication
 
-Spotify utilizeaza standardul OAuth2 (Open Authorization) pentru autentificare si 
-autorizare
+Spotify relies on OAuth2 (Open Authorization) standard for authentication and authorization.
 
-Pentru a obtine tokenul de acces, este necesara rularea fisierului
-_run_create_token.py_ si urmarirea pasilor descrisi in el.
+To obtain the access token, you need to run the _run_create_token.py_ file and follow the steps described.
 
-1. Se ruleaza comanda de mai jos, care returneaza un url ce trebuie accesat pentru a da
-permisiunea aplicatiei sa realizeze actiunile cuprinse in SCOPE. Dupa accesarea link-ului,
-se comenteaza la loc comanda.
+1. Run the command below, which returns a URL that needs to be accessed to grant the application the
+permission to run the actions listed in SCOPE. After accessing the link, comment back the command.
 ```commandline
 print(get_auth().url)
 ```
 
-2. Se acceseaza url-ul obtinut ruland comanda de mai sus si se accepta termenii. Apoi, vei fi redirectionat
-catre o pagina cu eroarea 404. Copiaza url-ul generat dupa redirectionare.
+2. Access the URL obtained running the command above and accept the terms. You will be redirected to a URL which you
+need to copy
 
-3. Se inlocuieste in variabila authorization_link url-ul copiat la pasul anterior
+3. Replace the value of the _authorization_code_ variable with the code obtained above
 
-4. Se ruleaza comanda de mai jos, urmand a inlocui apoi constanta ACCESS_TOKEN din fisierul 
-_constants.py_ cu noul cod de acces generat.
+4. Run the command below and copy the generated code in the constant ACCESS_TOKEN from the "constants.py" file
+
 ```commandline
 pprint(request_access_token(authorization_code).json()['access_token'])
 ```
 
-:bangbang: **Token-ul generat este valabil pentru 60 de minute. Dupa expirarea timpului, este necesar sa
-fie reluati pasii de la capitolul Autentificare.**
+:bangbang: **The generated token is available for 60 minutes. After the time expires, you need to 
+follow again the steps from Authentication chapter**
 
-Pentru mai multe informatii poti accesa link-urile urmatoare:
+For more information you can follow the following URLs:
 
-1. Ghidul de autorizare Spotify API: https://developer.spotify.com/documentation/web-api/concepts/authorization
+1. Spotify API authorization guide: https://developer.spotify.com/documentation/web-api/concepts/authorization
 
-2. Standardul de autorizare Google OAuth2: https://pkg.go.dev/golang.org/x/oauth2/google
+2. Google OAuth2 authorization standard: https://pkg.go.dev/golang.org/x/oauth2/google
 
-## Pasul 4 Rularea testelor
+## Step 4 Running the tests
 
-Testele pot fi gasite in folderul _tests_.
-Pentru rularea oricarui test, se poate rula fisierul corespunzator.
+The tests can be found in the _tests_ folder.
+To run any test, you can run the corresponding file.
 
-De exemplu, in fisierul _test_albums_api.py_ se pot rula toate testele apasand pe 
-triunghiul verde din dreptul clasei _TestAlbumsAPI_.
-Daca se doreste rularea unui singur test, se apasa triunghiul verde din dreptul functiei 
-care descrie testul dorit, de exemplu functia _test_get_album()_
+For example, in the _test_albums_api.py_ file, you can run the tests suite pressing the green triangle
+found to the left of the _TestAlbumsAPI_ class. 
+If you want to run only one test, press the green triangle found to the left of the function which 
+describes the desired test, for example the function _test_get_album()_
 
 ![test_albums_api](https://raw.githubusercontent.com/iuliantanaselea/API_TESTING_SPOTIFY/02d5e390184d3148c27e42f5c065f39696ff8ac2/assets/test_albums_api.png)
 
-## Pasul 5 Realizarea raportului
+## Step 5 Generating the report
 
-Pentru realizarea raportului este necesara rularea din Terminal a comenzii:
+To generate the report, run the Terminal command:
 ```commandline
 pytest --html=report.html
 ```
-Astfel, va fi generat un fisier html in directorul principal al proiectului, care
-poate fi deschis cu orice browser.
+An HTML file will be created in the project main directory, which can be opened with any browser.
