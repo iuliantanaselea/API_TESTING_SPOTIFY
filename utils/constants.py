@@ -1,18 +1,17 @@
-# SCOPE determina ce permisiuni are utilizatorul
+# SCOPE determines what  permisions the user has
 SCOPE = "user-read-private user-read-email playlist-modify-public playlist-modify-private user-library-modify ugc-image-upload user-library-read user-read-playback-position"
-CLIENT_ID = 'YOUR CLIENT ID' #Valoarea se gaseste in panoul de comanda al aplicatiei Spotify
-CLIENT_SECRET = 'YOUR CLIENT SECRET' #Valoarea se gaseste in panoul de comanda al aplicatiei Spotify
+CLIENT_ID = 'YOUR CLIENT ID' # You can find it in the application dashboard
+CLIENT_SECRET = 'YOUR CLIENT SECRET' # You can find it in the application dashboard
 REDIRECT_URI = 'http://localhost:8080'
 API = "https://api.spotify.com/v1"
 USER_ID = "YOUR USER ID"
 
 
-
-#Va fi inlocuit manual cu codul obtinut ruland fisierul "run_create_token.py"
-ACCESS_TOKEN = 'BQBilV-bsjBLN-AVaS9XpMXU0S_Uwxm9GKZf_V1wk7SXK2IjT87RMZpB4LRxK2BpdA7kSrpyM1CVx4hvnHJOQYG4II-LBpY5H4k6voNvW3U9kqkqmAP4H0YmPL5KxfiZ1xGp9ljCjlpH399_b7xhGExDfblX_mFikNAPOhJaR2cmTrS8oqqKRH3aWwbDvo7N_lqR7hTt89V0__PxehdG9NBXTjsyIJ86Gh8pVHFVnSMGgu_VOkphYTUonYscOJrUIKWSCfsxvrsE70VlrUTVBhfwhUgMQY3yUSxvNPRkvxQ'
+# Will be modified manually with the code obtained running the "run_create_token.py" file
+ACCESS_TOKEN = 'BQAqCjhuuvCJYMhQSWAJ_eDqoRMqJBEej-UlY1XmIAqu2UkfeyJhFoh-qUAXxh4erYEyPGCrgyrl4OF4aK_b560tG1Up_O0RB6p1P9pbkEoZ19LUFt2LE7iUdzeBEPCRnOPUJnPVU8YUt5NFGWxGdEBoX8OTqTiOT0FGkH7Du5lg36vylSds1tzjITF0IGpw8cEfzz7jl2Z9TpnEnWFf7fGKWyJdVVij7DOHbH_5BCcOoP3rUB2v-YDreKh70ieC88ZNbfGbRg08sCy0ep7wuKEooxTCTwnRWKuUq-ogstM'
 
 HEADER = {
     'Authorization': f"Bearer {ACCESS_TOKEN}",
-    # reprezinta valoarea tokenului de autentificare
+    # Represents the value of the authentication token
     'Content-Type': 'application/json'
 }

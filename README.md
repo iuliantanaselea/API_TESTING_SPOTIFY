@@ -87,7 +87,7 @@ print(get_auth().url)
 2. Access the URL obtained running the command above and accept the terms. You will be redirected to a URL which you
 need to copy
 
-3. Replace the value of the _authorization_code_ variable with the code obtained above
+3. Replace the value in the _authorization_code_ variable with the code obtained above
 
 4. Run the command below and copy the generated code in the constant ACCESS_TOKEN from the "constants.py" file
 
