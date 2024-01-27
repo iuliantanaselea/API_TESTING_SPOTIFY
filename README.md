@@ -41,7 +41,7 @@ because you will need them later when initializing the application.
 4. Access the [Edit profile](https://www.spotify.com/ro-ro/account/profile/) section on [Spotify](https://www.spotify.com/ro-ro/account/overview/) and 
 copy the _Username_ 
 
-## Pasul 2 Installation and Setup
+## Step 2 Installation and Setup
 
 I. Create a folder in your computer where you'd like to store the code to run the app.
 
